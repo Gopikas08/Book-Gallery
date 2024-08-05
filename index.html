@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Gallery</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- favicon -->
+  <link rel="icon" type="image/png" href="data:image/png;base64,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">
+<!-- google code -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- Header -->
+     <header>
+        <h1>Book Gallery</h1>
+        <button>Login</button>
+     </header>
+
+     <!-- Banner -->
+      <div class="Banner"></div>
+
+      <!-- section -->
+       <section>
+        <h2>Available Books</h2>
+
+<div class="row">
+    <div class="col">
+        <img src="https://m.media-amazon.com/images/I/51dGvrTpBWL.jpg" alt="">
+        <h4>Book Title</h4>
+        <h5>Price <span>$599</span></h5>
+        <button>Buy Now</button>
+    </div>
+    <div class="col">
+        <img src="https://m.media-amazon.com/images/I/51dGvrTpBWL.jpg" alt="">
+        <h4>Book Title</h4>
+        <h5>Price <span>$599</span></h5>
+        <button>Buy Now</button>
+    </div>
+    <div class="col">
+        <img src="https://m.media-amazon.com/images/I/51dGvrTpBWL.jpg" alt="">
+        <h4>Book Title</h4>
+        <h5>Price <span>$599</span></h5>
+        <button>Buy Now</button>
+    </div>
+    <div class="col">
+        <img src="https://m.media-amazon.com/images/I/51dGvrTpBWL.jpg" alt="">
+        <h4>Book Title</h4>
+        <h5>Price <span>$599</span></h5>
+        <button>Buy Now</button>
+    </div>
+    <div class="col">
+        <img src="https://m.media-amazon.com/images/I/51dGvrTpBWL.jpg" alt="">
+        <h4>Book Title</h4>
+        <h5>Price <span> $599</span></h5>
+        <button>Buy Now</button>
+    </div>
+
+</div>
+       </section>
+
+       <footer>
+        <div class="">
+            <h2>For Contact</h2>
+            <h4>Facebook</h4>
+            <h4>Instagram</h4>
+            <h4>Twitter</h4>
+        </div>
+        <div class="">
+            <h2>Location</h2>
+            <h4>Kerala</h4>
+            <h4>Bangloer</h4>
+            <h4>Munbai</h4>
+        </div>
+       </footer>
+</body>
+</html>
